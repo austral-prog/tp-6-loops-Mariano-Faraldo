@@ -1,22 +1,22 @@
-# Replace the "ANSWER HERE" for your answer
-
 def enumerate_list(lst):
-    """
-    Dada una lista de strings, retorna una nueva lista donde cada elemento
-    tiene el formato "indice. valor". Los strings vacios se deben saltear
-    y no deben aparecer en la lista resultante.
-    El indice debe ser consecutivo (no el indice original).
+    resultado = []
+    indice = 0
+    for palabra in lst:
+        if palabra != "":
+            resultado.append(f"{indice}. {palabra}")
+            indice += 1
 
-    Ejemplo: enumerate_list(["Red", "Green", "", "White"]) -> ["0. Red", "1. Green", "2. White"]
-    """
-    return "ANSWER HERE"  # Remove this line and implement
+    return resultado
 
 
 def enumerate_backwards(lst):
-    """
-    Igual que enumerate_list, pero cada palabra debe estar escrita al reves.
-    Los strings vacios se deben saltear.
+    resultado = []
+    indice = 0
 
-    Ejemplo: enumerate_backwards(["Red", "Green", ""]) -> ["0. deR", "1. neerG"]
-    """
-    return "ANSWER HERE"  # Remove this line and implement
+    for palabra in lst:
+        if palabra != "":
+            palabra_invertida = palabra[::-1]
+            resultado.append(f"{indice}. {palabra_invertida}")
+            indice += 1
+
+    return resultado
